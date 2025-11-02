@@ -1,0 +1,65 @@
+{
+  "info": {
+    "_postman_id": "b1e1e1e1-1111-2222-3333-666666666666",
+    "name": "SpringAIController API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Joke (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"topic\": \"cat\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/joke",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "v1", "joke"]
+        }
+      }
+    },
+    {
+      "name": "Get Book (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/book?category=history&year=2022",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "v1", "book"],
+          "query": [
+            { "key": "category", "value": "history" },
+            { "key": "year", "value": "2022" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Image (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/image?topic=sunset",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "v1", "image"],
+          "query": [
+            { "key": "topic", "value": "sunset" }
+          ]
+        }
+      }
+    }
+  ]
+}
+
